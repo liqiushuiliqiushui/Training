@@ -1,0 +1,61 @@
+package edu.com.baoxuanqi;
+import edu.util.BaseAction;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class peoplePages {
+	private AndroidDriver<AndroidElement> driver;
+	BaseAction action;
+	public ChatGroupPage(AndroidDriver<AndroidElement> driver) {
+		this.driver = driver;
+		this.action = new BaseAction(driver);
+	}
+	//点击联系人
+	public AndroidElement people() {
+		return driver.findElementByXPath("//*[@text='联系人 第 3 个标签，共 4 个']");
+	}
+	//选择第一个联系人
+	public AndroidElement first() {
+		return driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]\r\n");
+	}
+	//选择第二个联系人
+	public AndroidElement second() {
+		return driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[5]\r\n");
+	}
+	//点击星号
+	public AndroidElement xing() {
+		return driver.findElementByXPath("//*[@text='收藏']");
+	}
+	//进入发消息页面
+	public AndroidElement xiaoxi() {
+		return driver.findElementByXPath("//*[@text='开聊']").click();
+	}
+	//消息页面查看资料
+	public AndroidElement ziliao() {
+		return driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]\r\n");
+	}
+	//发消息页面右上角
+	public AndroidElement sandian() {
+		return driver.findElementByXPath("//*[@text='显示菜单']");
+	}
+	//发消息页面收藏
+	public AndroidElement shoucang1() {
+		return driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]\r\n");
+	}
+	//后退
+	public AndroidElement houtui() {
+		return driver.findElementByXPath("//*[@text='返回']");
+	}
+	//发送消息
+	private AndroidElement text() {
+		return driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText");
+	}
+	//发邮件
+	public AndroidElement youjian() {
+		return driver.findElementByXPath("//*[@text='Email ccc@demo.com']");
+		}
+	//点击发送
+	private AndroidElement submit() {
+		return driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button[2]");
+		}
+}
