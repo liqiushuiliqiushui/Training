@@ -1,0 +1,120 @@
+package edu.com.baoxuanqi;
+import edu.com.baoxuanqi.pages.peoplePages;
+import java.util.List;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import edu.basetest.*;
+import io.appium.java_client.MobileElement;
+public class test2 extends BaseTest{
+	//给联系人发消息a
+	@Test
+	public void test10() throws InterruptedException{
+		people().click();
+		first().click();
+		xiaoxi().click();
+		peoplePage submit = new peoplePage(driver);
+		submit.add("a");
+	}
+	//撤回消息
+	@Test
+	public void test11() throws InterruptedException{
+		people().click();
+		first().click();
+		xiaoxi().click();
+		peoplePage submit = new peoplePage(driver);
+		submit.add("a");
+		xuanzhong().click();
+		chehui().click();
+	}
+	
+	//复制消息
+		@Test
+		public void test12() throws InterruptedException{
+			people().click();
+			first().click();
+			xiaoxi().click();
+			peoplePage submit = new peoplePage(driver);
+			submit.add("a");
+			xuanzhong().click();
+			fuzhi().click();
+		}
+	
+		//分享消息-钉钉
+				@Test
+				public void test13() throws InterruptedException{
+					people().click();
+					first().click();
+					xiaoxi().click();
+					peoplePage submit = new peoplePage(driver);
+					submit.add("a");
+					xuanzhong().click();
+					fenxiang().click();
+					dingding().click();
+				}
+		//分享消息-蓝牙
+				@Test
+				public void test14() throws InterruptedException{
+					people().click();
+					first().click();
+					xiaoxi().click();
+					peoplePage submit = new peoplePage(driver);
+					submit.add("a");
+					xuanzhong().click();
+					fenxiang().click();
+					lanya().click();
+				}
+		//给联系人发空白消息
+		@Test
+		public void test15() throws InterruptedException{
+			people().click();
+			first().click();
+			xiaoxi().click();
+			peoplePage submit = new peoplePage(driver);
+			submit.add("");
+				}
+	//返回联系人页面
+		@Test
+		public void test16() throws InterruptedException{
+			people().click();
+			first().click();
+			xiaoxi().click();
+			1.click();
+				}
+		//给联系人发消息b
+		@Test
+		public void test17() throws InterruptedException{
+			people().click();
+			first().click();
+			xiaoxi().click();
+			peoplePage submit = new peoplePage(driver);
+			submit.add("b");
+		}
+		//给联系人发消息1234
+		@Test
+		public void test18() throws InterruptedException{
+			people().click();
+			first().click();
+			xiaoxi().click();
+			peoplePage submit = new peoplePage(driver);
+			submit.add("1234");
+		}
+		//给联系人发消息特殊符号
+				@Test
+				public void test19() throws InterruptedException{
+					people().click();
+					first().click();
+					xiaoxi().click();
+					peoplePage submit = new peoplePage(driver);
+					submit.add("%……（￥……*）");
+				}	
+				//给联系人发图片
+				@Test
+				public void test20() throws InterruptedException{
+					people().click();
+					first().click();
+					xiaoxi().click();
+					qita().click();
+					photo().click();
+					2().click();
+				}	
+}
