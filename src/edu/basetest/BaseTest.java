@@ -18,8 +18,8 @@ public class BaseTest {
 	
 //	LoginPage loginPage;
 	
-//	@BeforeClass
-	@Test
+	@BeforeClass
+//	@Test
 	public void startUp() throws MalformedURLException, InterruptedException {
 		url = new URL("http://127.0.0.1:4723/wd/hub");
 		DesiredCapabilities cap=new DesiredCapabilities();
@@ -38,6 +38,7 @@ public class BaseTest {
 //		loginPage.fillServer();
 //		loginPage.fillName();
 //		loginPage.fillPwd();
+//		driver.findElementByXPath("//*[@text='µÇÂ¼']").click();
 		
 	}
 	
