@@ -1,0 +1,96 @@
+package edu.com.baoxuanqi;
+
+import org.testng.annotations.Test;
+import edu.com.baoxuanqi.pages.peoplePages;
+import edu.basetest.BaseTest;
+import java.util.List;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import edu.basetest.*;
+import io.appium.java_client.MobileElement;
+
+public class test1 extends BaseTest{
+	
+	//收藏联系人
+		@Test
+		public void test1() {
+			people().click();
+			first().click();
+			xing().click();
+		}
+		//发消息页面收藏联系人
+		@Test
+		public void test2() {
+			people().click();
+			first().click();
+			xiaoxi().click();
+			sandian().click();
+			shoucang().click();
+		
+		}
+		//取消收藏联系人
+		@Test
+		public void test3() {
+			people().click();
+			first().click();
+			xing().click();
+			xing().click();
+		}
+		//发消息页面取消收藏联系人
+		@Test
+		public void test4() {
+			people().click();
+			first().click();
+			xiaoxi().click();
+			sandian().click();
+			shoucang().click();
+			shoucang().click();
+		}
+		//收藏多位联系人
+		@Test
+		public void test5() {
+			people().click();
+			first().click();
+			xing().click();
+			houtui().click();
+			second().click();
+			xing().click();
+		}
+		//收藏多位联系人取消收藏一位联系人
+		@Test
+	    public void test6() {
+			people().click();
+			first().click();
+			xing().click();
+			houtui().click();
+			second().click();
+			xing().click();
+			xing().click();
+		}
+		//发消息页面取消收藏联系人
+				@Test
+				public void test7() {
+					people().click();
+					first().click();
+					xiaoxi().click();
+					sandian().click();
+					ziliao().click();		
+		}
+		//进入发邮件
+				@Test
+				public void test8() {
+					people().click();
+					first().click();
+					youjian().click();
+		}
+				//进入发消息
+				@Test
+				public void test9() {
+					people().click();
+					first().click();
+					xiaoxi().click();
+		}
+
+				
+
+	}
